@@ -3,15 +3,18 @@
     <h1>Task Board</h1>
     <p>Create a list of tasks</p>
 
-    <div class="create-new">
+    <form class="create-new">
       <input
         type="text"
         v-model="newTask"
         placeholder="Add a new task"
-        @keypress.enter="addTask"
       />
-      <button @click="addTask">Add</button>
-    </div>
+      <button
+        @click="addTask"
+      >
+        Add
+      </button>
+    </form>
 
     <div class="tasks">
       <Task
@@ -25,6 +28,7 @@
 
 <script>
 export default {
+  name: "Home",
   data() {
     return {
       newTask: ''
